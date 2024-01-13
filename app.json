@@ -22,8 +22,7 @@
         "foregroundImage": "./assets/icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.memepage.Bhagwat_Geeta",
-      "enableDangerousExperimentalLeanBuilds": true
+      "package": "com.memepage.Bhagwat_Geeta"
     },
     "web": {
       "favicon": "./assets/favicon.png"

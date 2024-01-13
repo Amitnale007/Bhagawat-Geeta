@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { View, StyleSheet, Text } from "react-native";
 import AppHeader from "../component/AppHeader";
 import RText from "../component/readingScreen/RText";

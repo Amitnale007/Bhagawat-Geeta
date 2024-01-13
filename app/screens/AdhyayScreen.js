@@ -40,7 +40,6 @@ function AdhyayScreen({ navigation }) {
   return (
     <View style={styles.container}>
       <AppHeader />
-
       {loading && <LoadingANimation loading={loading} />}
       {error ? (
         <View style={styles.errorContainer}>
@@ -50,7 +49,7 @@ function AdhyayScreen({ navigation }) {
       ) : (
         <FlatList
           data={data}
-          keyExtractor={(data) => data.id.toString()}
+          keyExtractor={(data) => data.id}
           ItemSeparatorComponent={ListItemSeparator}
           renderItem={({ item }) => (
             <AppList

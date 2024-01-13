@@ -5,17 +5,25 @@ import LottieView from "lottie-react-native";
 function LoadingANimation({ loading }) {
   if (!loading) return null;
   return (
-    <LottieView
-      autoPlay
-      loop
-      style={{
-        width: "100%",
-        height: "100%",
-        justifyContent: "center",
-      }}
-      source={require("../animations/loading.json")}
-    ></LottieView>
+    <View style={styles.container}>
+      <LottieView
+        autoPlay
+        loop
+        style={{
+          flex: 1,
+        }}
+        source={require("../animations/loading.json")}
+      ></LottieView>
+    </View>
   );
 }
+const styles = StyleSheet.create({
+  container: {
+    ...StyleSheet.absoluteFillObject,
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: 50,
+  },
+});
 
 export default LoadingANimation;

@@ -3,15 +3,24 @@ import { View, StyleSheet, Text } from "react-native";
 import AppHeader from "../component/AppHeader";
 import RText from "../component/readingScreen/RText";
 import BottomButton from "../component/readingScreen/BottomButton";
+import ToggleSwitch from "toggle-switch-react-native";
 
 function ReadingScreen({ route }) {
   const [cur, setCur] = useState(route.params.verse);
-
+  const [OnOff, setOnOff] = useState(false);
   const [data, setData] = useState(
     route.params.allVerses.find(
       (item) => item.verse_number === route.params.verse
     )
   );
+
+  const getTranslation = () => {
+    return data.translations.find((translation) =>
+      !OnOff
+        ? translation.author_name === "Swami Tejomayananda"
+        : translation.author_name === "Shri Purohit Swami"
+    ).description;
+  };
 
   const handleNext = () => {
     setCur((prevCur) => {
@@ -48,13 +57,16 @@ function ReadingScreen({ route }) {
         <Text style={styles.head}>{"Verse " + data.verse_number}</Text>
         <RText>{data.text}</RText>
         <Text style={styles.head}>Translation</Text>
-        <RText>
-          {
-            data.translations.find(
-              (translation) => translation.author_name === "Swami Tejomayananda"
-            ).description
-          }
-        </RText>
+        <ToggleSwitch
+          isOn={OnOff}
+          onColor="orange"
+          offColor="grey"
+          label="English/Hindi"
+          labelStyle={{ color: "black", fontWeight: "900" }}
+          size="small"
+          onToggle={(isOn) => setOnOff(isOn)}
+        />
+        <RText style={{ marginTop: 10 }}>{getTranslation()}</RText>
       </View>
       <BottomButton
         handleNext={handleNext}

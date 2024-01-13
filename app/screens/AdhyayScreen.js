@@ -50,7 +50,7 @@ function AdhyayScreen({ navigation }) {
       ) : (
         <FlatList
           data={data}
-          keyExtractor={(data) => data.id}
+          keyExtractor={(data) => data.id.toString()}
           ItemSeparatorComponent={ListItemSeparator}
           renderItem={({ item }) => (
             <AppList

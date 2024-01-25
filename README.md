@@ -1,5 +1,6 @@
 # Bhagavad Gita App
-# Download From Here => https://drive.google.com/file/d/145WHk6Kk1Exk8VKtUynSoSZ2kyJ-P2gW/view?usp=drive_link
+# Download From Here =>
+-https://drive.google.com/file/d/145WHk6Kk1Exk8VKtUynSoSZ2kyJ-P2gW/view?usp=drive_link
 ## Overview
 
 The Bhagavad Gita App is a mobile application built using React Native and Expo that provides a digital platform for users to read and explore the teachings of the Bhagavad Gita.

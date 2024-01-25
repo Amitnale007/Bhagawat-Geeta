@@ -14,7 +14,11 @@ The Bhagavad Gita App is a mobile application built using React Native and Expo 
 
 ## Screenshots
 
-[Include screenshots or demo gifs of your app here]
+![Screenshot_2024-01-25-14-18-40-30_002080748c2adf39c9974717756aed47](https://github.com/Amitnale007/Bhagawat-Geeta/assets/97301181/88da7473-ea55-4843-851a-782389c3a3af)
+![Screenshot_2024-01-25-14-18-31-89_002080748c2adf39c9974717756aed47](https://github.com/Amitnale007/Bhagawat-Geeta/assets/97301181/7b11df8b-9b78-4bcf-b310-7cffb99ce615)
+![Screenshot_2024-01-25-14-18-27-87_002080748c2adf39c9974717756aed47](https://github.com/Amitnale007/Bhagawat-Geeta/assets/97301181/3ed24513-97ac-45e9-84f9-e200579fa04d)
+![Screenshot_2024-01-25-14-18-45-17_002080748c2adf39c9974717756aed47](https://github.com/Amitnale007/Bhagawat-Geeta/assets/97301181/57a45abb-74b7-4dcf-8375-38fe54807920)
+
 
 ## Getting Started
 
@@ -30,3 +34,5 @@ The Bhagavad Gita App is a mobile application built using React Native and Expo 
    ```bash
    git clone https://github.com/your-username/bhagavad-gita-app.git
    cd bhagavad-gita-app
+   npm install
+   npm start

@@ -1,8 +1,29 @@
 import React from "react";
 import { Text, StyleSheet, ImageBackground, Image, View } from "react-native";
 import AppButton from "../component/AppButton";
+import db from "../api/db";
+import { useEffect } from "react";
+
+import firebase from "firebase/app";
+import "firebase/database";
+import Dropdown from "../component/DropDown";
 
 function WelcomeScreen({ navigation }) {
+  const fetchData = async () => {
+    try {
+      const data = await db.getChapter();
+      const verse = await db.getVerse();
+      // console.log(verse);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  useEffect(() => {
+    fetchData();
+    // return () => {
+    //   DB.ref("/CHAPTERS").off("value");
+    // };
+  }, []);
   return (
     <ImageBackground
       style={styles.container}
@@ -17,7 +38,7 @@ function WelcomeScreen({ navigation }) {
           source={require("../../assets/welcome.png")}
         />
       </View>
-
+      <Dropdown></Dropdown>
       <AppButton
         style={styles.btn}
         onPress={() => navigation.navigate("Chapter")}

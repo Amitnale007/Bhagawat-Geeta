@@ -1,10 +1,14 @@
 import React from "react";
 import { View, StyleSheet, Text } from "react-native";
-
+import { useContext } from "react";
+import langContext from "../context/langContext";
 function AppHeader(props) {
+  const value = useContext(langContext);
   return (
     <View style={styles.header}>
-      <Text style={styles.hText}>Bhagwat Geeta</Text>
+      <Text style={styles.hText}>
+        {value.lang == "hindi" ? "भगवद गीता" : "Bhagwat Geeta"}
+      </Text>
     </View>
   );
 }

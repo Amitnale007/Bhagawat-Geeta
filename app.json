@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "Bhagwat_Geeta",
+    "name": "Bhagwat Geeta",
     "slug": "Bhagwat_Geeta",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -8,7 +8,7 @@
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",
-      "resizeMode": "contain",
+      "resizeMode": "cover",
       "backgroundColor": "#ffffff"
     },
     "assetBundlePatterns": [
@@ -33,5 +33,8 @@
       }
     }
   
+  },
+  "react-native-google-mobile-ads": {
+    "android_app_id": "ca-app-pub-9697862888903327~8063342093"
   }
 }

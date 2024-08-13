@@ -13,16 +13,12 @@ function AppList({ title, subTitle, onPress }) {
       <View style={styles.container}>
         <Image
           style={styles.image}
-          source={{
-            uri: "https://www.bhagavad-gita.us/wp-content/uploads/2012/10/gita-02.jpg",
-          }}
+          source={require("../../assets/gita-02.jpg")}
         />
         <View style={styles.detailsContainer}>
           <Text style={styles.title}>{title}</Text>
 
-          <Text style={styles.subTitle} numberOfLines={2}>
-            {subTitle}
-          </Text>
+          <Text style={styles.subTitle}>{subTitle}</Text>
         </View>
       </View>
     </TouchableWithoutFeedback>
@@ -46,10 +42,10 @@ const styles = StyleSheet.create({
     borderRadius: 35,
   },
   subTitle: {
-    color: "tomato",
+    color: "grey",
   },
   title: {
-    fontSize: 25,
+    fontSize: 20,
   },
 });
 export default AppList;
